@@ -1,0 +1,120 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>   
+
+int main(){
+//declarations
+int choice;
+char conversion_factor[30];
+float kg, lb;
+float cm, inch;
+float m, ft;
+float l, oz;
+
+
+// Greeting
+printf("Welcome to the Unit Conversion Program!\n");
+printf("This program allows you to convert various units from metric to imperial and vice versa\n");
+printf("What conversion would you like to perform?\n");
+printf("1. Kilograms to Pounds\n");
+printf("2. Pounds to Kilograms\n");
+printf("3. Centimeters to Inches\n");
+printf("4. Inches to Centimeters\n");
+printf("5. Meters to Feet\n");
+printf("6. Feet to Meters\n");
+printf("7. Liters to Ounces\n");
+printf("8. Ounces to Liters\n");
+printf("Please enter your choice (1-8): ");
+scanf("%d", &choice);
+
+// Input and conversion
+if (choice == 1) {
+    printf("you chose to convert kilograms to pounds.\n");
+    printf("Enter the weight in Kilograms:");
+    scanf("%f", &kg);
+    if (kg < 0) {
+        printf("Error: Weight must be non-negative.\n");
+    } else {
+        lb = kg * 2.2; // Conversion factor
+        printf("%.2f kg = %.2f lb :)\n ", kg, lb);
+    }
+
+} else if (choice == 2) {
+    printf("you chose to convert pounds to kilograms.\n");
+    printf("Enter the weight in Pounds:");
+    scanf("%f", &lb);
+    if (lb < 0) {
+        printf("Error: Weight must be non-negative.\n");
+    } else {
+        kg = lb / 2.2; // Conversion factor
+        printf("%.2f lb = %.2f kg :)\n", lb, kg);
+    }
+
+
+}else if (choice == 3) {
+printf("You chose to convert centimetres to inches\n");
+printf("Enter the length in centimetres: ");
+scanf("%f", &cm);
+if (cm < 0) {
+    printf("Error: Length must be non-negative.\n");
+} else {
+    inch = cm / 2.54; // Conversion factor
+    printf("%.2f cm = %.2f inches :)\n", cm, inch);
+}
+
+} else if (choice == 4) {
+    printf("You chose to convert inches to centimetres\n");
+    printf("Enter the length in inches: ");
+    scanf("%f", &inch);
+    if (inch < 0) {
+        printf("Error: Length must be non-negative.\n");
+    } else {
+        cm = inch * 2.54; // Conversion factor
+        printf("%.2f inches = %.2f cm :)\n", inch, cm);
+    }
+
+} else if (choice == 5) {
+    printf("You chose to convert metres to feet\n");
+    printf("Enter the length in metres: ");
+    scanf("%f", &m);
+    if (m < 0) {
+        printf("Error: Length must be non-negative.\n");
+    } else {
+        ft = m * 3.28; // Conversion factor
+        printf("%.2f m = %.2f ft :)\n", m, ft);
+    }
+
+} else if (choice == 6) {
+    printf("You chose to convert feet to metres\n");
+    printf("Enter the length in feet: ");
+    scanf("%f", &ft);
+    if (ft < 0) {
+        printf("Error: Length must be non-negative.\n");
+    } else {
+        m = ft / 3.28; // Conversion factor
+        printf("%.2f ft = %.2f m :)\n", ft, m);
+    }
+
+} else if (choice == 7) {
+    printf("You chose to convert litres to ounces\n");
+    printf("Enter the volume in litres: ");
+    scanf("%f", &l);
+    if (l < 0) {
+        printf("Error: Volume must be non-negative.\n");
+    } else {
+        oz = l * 33.81; // Conversion factor
+        printf("%.2f L = %.2f oz :)\n", l, oz);
+    }
+
+} else if (choice == 8) {
+    printf("You chose to convert ounces to litres\n");
+    printf("Enter the volume in ounces: ");
+    scanf("%f", &oz);
+    if (oz < 0) {
+        printf("Error: Volume must be non-negative.\n");
+    } else {
+        l = oz / 33.81; // Conversion factor
+        printf("%.2f oz = %.2f L :)\n", oz, l);
+    }
+}
+}
